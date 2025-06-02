@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Family Timeline</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+        .timeline.horizontal { display: flex; justify-content: space-around; align-items: center; width: 90%; border-top: 3px solid #333; margin: 40px auto; padding-top: 20px; }
+        .event { position: relative; text-align: center; padding-top: 20px; }
+        .event h3 { font-size: 18px; margin-bottom: 5px; }
+        .event::before { content: "●"; font-size: 24px; color: #333; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); }
+        table { width: 50%; margin: auto; border-collapse: collapse; border: 1px solid #333; }
+        th, td { padding: 10px; text-align: center; border: 1px solid #333; }
+        th { background-color: #333; color: white; }
+        td { background-color: #f4f4f4; }
+        #timeline { display: none; }
+    </style>
+</head>
+<body>
+
+    <h1>💖 Happy Anniversary! 💖</h1>
+    <p>Love you both endlessly—here's a look back at your beautiful journey together! 🥰✨</p>
+
+    <h2>Enter the Secret Code to Unlock the Timeline</h2>
+    <p>(Hint: Decode **11-O4-F1-Z1-F1** using the table below!)</p>
+
+    <div id="password-container">
+        <label for="password">Secret Code:</label>
+        <input type="password" id="password" />
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+
+    <div id="timeline">
+        <h2>Family Timeline (2011 - 2025)</h2>
+        <div class="timeline horizontal">
+            <div class="event"><h3>12 Feb 2011</h3><p>Met for the first time at engagement</p></div>
+            <div class="event"><h3>2 June 2011</h3><p>Married to spend life with each other</p></div>
+            <div class="event"><h3>2011</h3><p>Went for a honeymoon at Nepal</p></div>
+            <div class="event"><h3>18 Feb 2013</h3><p>Adi was born</p></div>
+            <div class="event"><h3>2014</h3><p>Went for trips</p></div>
+            <div class="event"><h3>1 August 2016</h3><p>Swastik was born</p></div>
+            <div class="event"><h3>2017</h3><p>Brought our home sweet home</p></div>
+            <div class="event"><h3>Jan 2024</h3><p>Went for a beautiful trip to Malaysia</p></div>
+            <div class="event"><h3>June 2024</h3><p>Went for another trip to Southeast Asia</p></div>
+            <div class="event"><h3>Jan 2025</h3><p>Another beautiful trip</p></div>
+            <div class="event"><h3>1 June 2025</h3><p>The current trip</p></div>
+            <div class="event"><h3>2 June</h3><p>The anniversary of these two souls when they met</p></div>
+        </div>
+
+        <h2>Letter-to-Code Reference</h2>
+        <table>
+            <tr><th>Letter</th><th>Code</th></tr>
+            <tr><td>A</td><td>X7</td></tr><tr><td>B</td><td>D3</td></tr><tr><td>C</td><td>P2</td></tr>
+            <tr><td>D</td><td>K9</td></tr><tr><td>E</td><td>M5</td></tr><tr><td>F</td><td>R8</td></tr>
+            <tr><td>G</td><td>Z1</td></tr><tr><td>H</td><td>Y4</td></tr><tr><td>I</td><td>T6</td></tr>
+            <tr><td>J</td><td>L2</td></tr><tr><td>K</td><td>S9</td></tr><tr><td>L</td><td>B7</td></tr>
+            <tr><td>M</td><td>N3</td></tr><tr><td>N</td><td>C5</td></tr><tr><td>O</td><td>F1</td></tr>
+            <tr><td>P</td><td>V8</td></tr><tr><td>Q</td><td>H2</td></tr><tr><td>R</td><td>W9</td></tr>
+            <tr><td>S</td><td>G6</td></tr><tr><td>T</td><td>O4</td></tr><tr><td>U</td><td>Q5</td></tr>
+            <tr><td>V</td><td>A3</td></tr><tr><td>W</td><td>E7</td></tr><tr><td>X</td><td>J1</td></tr>
+            <tr><td>Y</td><td>U9</td></tr><tr><td>Z</td><td>I2</td></tr>
+        </table>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "11togo") {
+                document.getElementById("timeline").style.display = "block";
+                document.getElementById("password-container").style.display = "none";
+            } else {
+                alert("Incorrect code! Try again.");
+            }
+        }
+    </script>
+
+</body>
+</html>
